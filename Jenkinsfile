@@ -15,7 +15,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("julianorib/meuapp:${env.BUILD_ID}", '-f Dockerfile .')
+                    dockerapp = docker.build("julianorib/meuapp:v1.0}", '-f Dockerfile .')
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'Docker-Hub-Juliano') {
                     dockerapp.push('latest')
-                    dockerapp.push("${env.BUILD_ID}")
+                    dockerapp.push("v1.0}")
                     }
                 }
             }
