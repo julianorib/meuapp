@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy Kubernetes') {
             steps {
                 withKubeConfig([credentialsId: 'kubernetes-hml']) {
-                    sh 'kubectl apply -f .'
+                    sh 'kubectl apply -f . -R'
                 }
             }
         }
