@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name: meuapp-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector: 
     matchLabels:
       app: meuapp
@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
         - name: meuapp
-          image: julianorib/meuapp:v1.6
+          image: julianorib/meuapp:v1.7
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
