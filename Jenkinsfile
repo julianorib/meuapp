@@ -22,7 +22,7 @@ pipeline {
         stage('Push Image') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com, 'Docker-Hub-Juliano') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'Docker-Hub-Juliano') {
                         dockerapp.push('latest')
                         dockerapp.push("$(env.BUILD_ID)")
                     }
