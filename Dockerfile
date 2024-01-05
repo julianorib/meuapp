@@ -1,3 +1,3 @@
 FROM cgr.dev/chainguard/nginx
 COPY /src /usr/share/nginx/html/
-EXPOSE 80
+EXPOSE 8080
