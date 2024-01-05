@@ -34,7 +34,6 @@ pipeline {
                 withKubeConfig([credentialsId: 'kubernetes-hml']) {
                     sh 'kubectl apply -f .'
                 }
-                }
             }
         }
     }
