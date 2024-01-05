@@ -15,7 +15,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("julianorib/meuapp:v1.0}", '-f Dockerfile .')
+                    dockerapp = docker.build("julianorib/meuapp:v1.0", '-f Dockerfile .')
                 }
             }
         }
