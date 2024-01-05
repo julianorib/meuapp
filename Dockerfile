@@ -1,4 +1,3 @@
-FROM php:8.2-apache
-RUN docker-php-ext-install mysqli
+FROM cgr.dev/chainguard/php
 COPY /src /var/www/html/
 EXPOSE 80
