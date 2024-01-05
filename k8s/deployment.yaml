@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: meuapp-deployment
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: meuapp
+  template: 
+    metadata:
+      labels:
+        app: meuapp
+    spec: 
+      containers:
+        - name: meuapp
+          image: julianorib/meuapp:v1.0
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
