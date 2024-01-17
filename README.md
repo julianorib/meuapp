@@ -6,7 +6,7 @@ Aplicação de teste para ser gerada uma imagem docker e ser executada em um amb
 
 https://images.chainguard.dev/directory
 
-- Pipeline do Jenkins
+- Pipeline do Jenkins e do Gitlab
     - Build e envio para Dockerhub
     - Deploy no Kubernetes
 
