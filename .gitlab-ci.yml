@@ -31,5 +31,5 @@ Deploy Kubernetes:
       before_script:
         - export KUBECONFIG=$KUBE_CREDENTIALS
       script:
-        - kubectl apply -f . -R || true
+        - kubectl apply -f k8s/
 
