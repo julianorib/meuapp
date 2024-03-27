@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
         - name: meuapp
-          image: julianorib/meuapp:v3.0
+          image: julianorib/meuapp:v3.1
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
