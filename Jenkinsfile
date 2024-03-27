@@ -19,7 +19,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'Docker-Hub-Juliano') {
                     dockerapp.push('latest')
-                    dockerapp.push('v2.0')
+                    dockerapp.push('v3.0')
                     }
                 }
             }
