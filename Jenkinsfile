@@ -10,7 +10,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("julianorib/meuapp:v3.2", '-f Dockerfile .')
+                    dockerapp = docker.build("julianorib/meuapp:v3.5", '-f Dockerfile .')
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'Docker-Hub-Juliano') {
                     dockerapp.push('latest')
-                    dockerapp.push('v3.2')
+                    dockerapp.push('v3.5')
                     }
                 }
             }
